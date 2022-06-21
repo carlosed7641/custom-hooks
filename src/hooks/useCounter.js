@@ -4,16 +4,16 @@ const useCounter = (initialState = 1) => {
     
     const [state, setState] = useState(initialState);
 
-    const increment = (/**factor = 1**/) => {
-        setState(state + 1);
+    const increment = (factor = 1) => {
+        setState((current) => current + factor);
     }
 
     const reset = () => {
         setState(initialState);
     }
 
-    const decrement = (/** factor = 1 **/) => {
-        setState(state - 1);
+    const decrement = ( factor = 1) => {
+        setState((current) => current - factor);
     }
 
     return {

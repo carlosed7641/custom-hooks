@@ -9,9 +9,10 @@ const useForm = (initialState = {} ) => {
     }
 
     const handleInputChange = ({target}) => {
+        const {name, value} = target;
         setValues({
             ...values,
-            [target.name]: target.value
+            [name]: value
         })
     }
 
